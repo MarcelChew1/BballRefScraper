@@ -1,4 +1,4 @@
-# BballRefScrapper
+# BballRefScraper
 Scrapper for basketballreference.com
 
 This repository acts as a scrapper for data from basketballreference.com.
