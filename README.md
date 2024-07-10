@@ -8,6 +8,18 @@ It can pull information from all tables on the players profile.
 Scrapping was done using the Beautiful Soup and Request libraries.
 Data is processed using pandas and exported using either CSV or XLSX.
 
+# Imports 
+Libraries needed: 
+  Beautiful Soup
+  Requests
+  XlsxWriter
+  Pandas
+
+pip install XlsxWriter
+pip install beautifulsoup4
+pip install numpy<2
+pip install requests
+
 # Usage
 Running main.py prompts the user through typical flow of obtaining player data.
 The flow is as follows:
