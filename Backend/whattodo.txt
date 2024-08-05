@@ -1,0 +1,30 @@
+For individual player we probably want a past season average points but also variance of points
+Average shots taken per game and how it varies based on the game score
+Probably can group games into blowout against, blowout for and close 
+Average free throws per game 
+
+Maybe based on how the team performed overall for the entire year on defense and see how it changes the player
+
+See how their position matchup is and whether it affects each player
+
+1. Variance of a players points & all player points to find which players have the most variance / per season / overall
+2. Average shots per game and the variance to see if its directly correlated to points per game variance (it should be)
+3. Group games into blowout against, blowout for and close for the game before to see how the variance of the previous two correlates
+4. Check which teams have a lot of blowouts against / for compared to others
+5. Free throws per game based on ref?
+6. See how a each player performs against a certain defender and a certain team 
+
+Project 1 
+
+Figure out if player is on a hot streak or cold streak 
+
+Go through the data split by season
+
+The probabilities we are going to calculate:
+
+- If the 2nd previous game is less than previous what is the chance this game will be higher
+  - extend on this giving some sort of bound. If the previous game is more that 1 stdev away from the current game
+- Is there a measureable amount that this will go up by
+
+
+
