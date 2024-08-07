@@ -42,6 +42,7 @@ class PlayerIndividual:
       season_stats = table.find_all("tr", id=re.compile(r'^pgl_basic\.\d+$'))
 
       curr_df = create_ind_stats_df(season_stats, t_head)
+      curr_df['Season'] = year
       df_list.append(curr_df)
       year -= 1
 

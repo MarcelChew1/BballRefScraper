@@ -1,5 +1,5 @@
 import pandas as pd
-
+from teamsList import old_names_dict
 def create_stats_df(data):
   header = data.find("thead").find_all("tr")
 
@@ -30,9 +30,14 @@ def create_ind_stats_df(data, cols):
   for game in data:
     info = [v.get_text(strip=True) for v in game.find_all(["th", "td"])]
     df.loc[len(df)] = info
+
+  # need to change all old names to some standard value
+  for k, v in old_names_dict.items():
+    df.replace(k, v, inplace=True)
   return df
 
 def create_csv(data, url):
+  pd.set_option('future.no_silent_downcasting', True)
   data.replace("", float("NaN"), inplace=True)
   data.dropna(axis=1, how='all', inplace=True)
   data.dropna(axis=0, how='all', inplace=True)

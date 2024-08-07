@@ -14,7 +14,6 @@ class Player:
     self.per_game = PlayerIndividual(self)
     self.per_game.get_all_points()
     self.stats = CalculateStats(self)
-    self.stats.calculate_hot()
 
   def main_profile_url(self): 
     return f"https://www.basketball-reference.com/players/{self.url_initial}/{self.url_name}.html"

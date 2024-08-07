@@ -4,8 +4,8 @@ from PlayerIndividual import PlayerIndividual
 import pandas as pd
 
 def main():
-  player = Player("Lebron", "James")
-  player.season.adj_shooting_info()
+  player = Player("Stephen", "Curry")
+  player.stats.calculate_def()
 
   # playerIndividual = PlayerIndividual(player)
   # playerIndividual.get_all_points()

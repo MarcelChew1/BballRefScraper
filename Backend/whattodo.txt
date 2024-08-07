@@ -27,4 +27,11 @@ The probabilities we are going to calculate:
 - Is there a measureable amount that this will go up by
 
 
+Project 2 - MatchUps
+
+Get the data on the defensive ratings of all teams 
+Calculate the adjusted defensive rating of all teams 
+
+Graph how a player performs relative to the opponents defensive and adjusted ratings
+
 
