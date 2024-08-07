@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bballrefscraper/static/css/main.f855e6bc.css",
+    "main.js": "/bballrefscraper/static/js/main.cf8d912a.js",
+    "static/js/453.7a894929.chunk.js": "/bballrefscraper/static/js/453.7a894929.chunk.js",
+    "index.html": "/bballrefscraper/index.html",
+    "main.f855e6bc.css.map": "/bballrefscraper/static/css/main.f855e6bc.css.map",
+    "main.cf8d912a.js.map": "/bballrefscraper/static/js/main.cf8d912a.js.map",
+    "453.7a894929.chunk.js.map": "/bballrefscraper/static/js/453.7a894929.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.cf8d912a.js"
+  ]
+}
