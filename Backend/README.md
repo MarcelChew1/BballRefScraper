@@ -1,53 +1,23 @@
-# BballRefScraper
-Scrapper for basketballreference.com
+# Backend Notes
 
-This repository acts as a scrapper for data from basketballreference.com.
-It can pull information from all tables on the players profile.
+The main project documentation lives in the repository root `README.md`. This file is a short backend-specific reference for the Python scraping and API code.
 
-# Implementation
-Scrapping was done using the Beautiful Soup and Request libraries.
-Data is processed using pandas and exported using either CSV or XLSX.
+## Entry Points
 
-# Imports 
-Libraries needed: 
-  Beautiful Soup
-  Requests
-  XlsxWriter
-  Pandas
+- `app.py`: Flask API used by the React frontend.
+- `main.py`: Older experimentation/CLI entry point. Much of the original interactive flow is currently commented out.
+- `getTeamsScript.py`: Scrapes Basketball Reference team pages and writes cached CSV files under `teams/`.
 
-pip install XlsxWriter
-pip install beautifulsoup4
-pip install numpy<2
-pip install requests
+## Core Modules
 
-# Usage
-Running main.py prompts the user through typical flow of obtaining player data.
-The flow is as follows:
-  - What information the user wants (Season Averages)
-  - What metrics the user wants (multiple can be chosen)
-  - What file name the data will be exported to
-  - Whether the user wants to continue
+- `Player.py`: Builds Basketball Reference player URLs from first and last names and wires together the scraper/analysis classes.
+- `PlayerOverview.py`: Scrapes career/stat tables from a player's main Basketball Reference profile page.
+- `PlayerIndividual.py`: Scrapes season game logs and writes per-game CSV data.
+- `dataFrameManipulation.py`: Converts parsed HTML tables into pandas DataFrames and writes CSV output.
+- `CalculateStats.py`: Experimental analysis code for scoring variance and opponent defensive rating comparisons.
 
-# Data
-If the user selects only one stat to export the data will be exported as CSV.
-If the user selects multiple stats to export the data will be exported as XLSX.
-The table structure will follow the tables as shown on basketballreference.com as 
-closely as possible. Exceptions occur with merged cells which are excluded from 
-the tables.
+## Runtime Notes
 
-# Understanding the classes
-# Player
-The Player class serves to get general information about a player which currently 
-implements finding the url of the player
-
-# Player Season
-The PlayerSeason class serves to pull season by season data from the players main
-page using Beautiful Soup and Request libraries.
-
-For certain tables the request response does not give the active HTML of the table
-but instead commented out placeholder code in place of the HTML that is seen when
-visiting the website. I have converted the comment into HTML and processed it 
-but there are no guarantees that this provides the most up to data statistics 
-if this is the placeholder code and this code is not updated. From an eye test
-the data looks accurate.
-
+- Run backend commands from this `Backend` directory. Several paths are relative, including `players/` and `teams/`.
+- There is no committed backend dependency file yet. See the root `README.md` for the dependency list inferred from imports.
+- Cached HTML and CSV files are stored locally to reduce repeated Basketball Reference requests.
